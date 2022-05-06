@@ -10,6 +10,7 @@ if [[ ! -f "$MOUNT_TARGET" ]]; then
     exit 1
 fi
 
+# umount "$MOUNT_TARGET"
 if ! findmnt "$MOUNT_TARGET"; then
     mount --bind "$QML_PATH" "$MOUNT_TARGET"
     echo "[+] Enabled succesfully" >&2
